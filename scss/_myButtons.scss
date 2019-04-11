@@ -1,0 +1,53 @@
+@mixin pure-btn($bg:#E6E6E6,$color:#444,$radius:2px,$pd:0,$darken:5%) {
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: $bg;
+  text-decoration: none;
+  border-radius: $radius;
+  font-size: 100%;
+  padding: $pd $pd*2;
+  color: $color;
+  border: none;
+  transition: all .3s;
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  &:hover {
+    background: darken($bg,$darken);
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:active {
+    background: $bg;
+    filter:brightness(105%);
+  }
+}
+
+@mixin checkbox01($width:16px,$bg:#FFF){
+  content: "";
+  display: inline-block;
+  width: $width;
+  height: $width;
+  background: $bg;
+  vertical-align: top;
+}
+
+@mixin checkbox01checked($size:16px,$color:#444){
+  content: "\2714";
+  text-align: center;
+  font-size: $size;
+  color: $color;
+}

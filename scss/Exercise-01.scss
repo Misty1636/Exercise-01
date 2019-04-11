@@ -1,0 +1,380 @@
+@import "_reset.scss";
+@import "_breakpoint.scss";
+@import "_skill.scss"; 
+@import "_myButtons.scss";
+
+@include border-box;
+
+$purple: #7828B4;
+$purple-light: #9013FE;
+$white: #FFFFFF;
+$black-100: #F2F2F2;
+$black-300: #EBEBEB;
+$black-500: #D7D7D7;
+$black-700: #9B9B9B;
+$black-900: #000000;
+
+body,html{
+	font-family: 'Roboto Regular';
+}
+
+.wrap{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.header{
+	padding: 1.5rem 5rem;
+	background: $purple;
+	display: flex;
+	align-items: center;
+	@include Bp(992){
+		padding: 1.5rem 3rem;
+		justify-content: space-between;
+		@include Bp(767){
+			display: block;
+			padding: 0;
+		}
+	}
+}
+
+.logo{
+		margin-right: 14.5%;
+		@include Bp(992){
+			margin-right: 0;
+			@include Bp(767){
+				padding: 1.25rem 0;
+				text-align: center;
+			}
+		}
+		a{
+			display: block;
+		}
+	}
+	.serach-content{
+		display: flex;
+		justify-content: center;
+		padding: .5rem 0 .7rem;
+		@include Bp(767){
+			background: $black-100;
+			@include Bp(414){
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
+		}
+	}
+	.search{
+		display: flex;
+		border-bottom: .5px solid $white;
+		padding: .3rem 0;
+		align-items: center;
+		@include Bp(767){
+			border-color: $black-900;
+			width: 350px;
+			@include Bp(414){
+				width: 100%;
+			}
+		}
+		.icon{
+			border: none;
+			background:transparent;
+			cursor: pointer;
+			outline: 0;
+			i{
+				color: $white;
+				@include Bp(767){
+					color: $black-900;
+				}
+			}
+		}
+		.explore{
+			font-size: 20px;
+			color: $white;
+			width: 330px;
+			padding-left: 1.2rem;
+			border: none;
+			background:transparent;
+			outline: 0;
+			@include Bp(414){
+				width: 100%;
+			}
+		}
+		input::-webkit-input-placeholder{
+    	color: rgba($white,.5);
+    	font-style: italic;
+    	font-size: 16px;
+    	@include Bp(767){
+    		color: $black-700;
+    	}
+    }
+	}
+
+
+.content{
+  background: $black-100;
+  padding: 0 2.5rem;
+  @include Bp(767){
+  	padding: 0 3.5rem;
+  	@include Bp(576){
+  		padding: 0;
+  	}
+  }
+  .box{
+  	display: flex;
+  	@include Bp(767){
+  		flex-direction: column;
+  	}
+  }
+}
+
+.condition{
+  	margin-right: 40px; 
+  	@include Bp(767){
+      margin: 0 auto;
+      width: 450px;
+      @include Bp(576){
+      	width: 100%;
+      }
+  	}
+  	h3{
+  		font-weight: 700;
+  		font-size: 20px;
+  		margin-bottom: 1.5rem;
+  		@include Bp(767){
+  			text-align: center;
+  		}
+  	}
+  	.location,.date,.categories{
+  		padding: 1.5rem 2.5rem;
+  		border-bottom: 1px solid $black-500;
+  		background: $black-300;
+  	}
+  	.country{
+  		width: 220px;
+  		padding: .5rem .5rem;
+  		border: none;
+  		border-radius: 3px;
+  	}	
+		.time{
+			text-align: right;
+			@include Bp(767){
+				text-align: center;
+			}
+			input{
+				padding: .5rem .3rem;
+				width: 170px;
+				border: none;
+				margin-left: 12px;
+			}		
+  	}
+  	.dayfrom{
+			margin-bottom: .5rem;
+		}
+  	.categories{
+  		border: none;
+  	}
+  	.optional{
+  		input[type="checkbox"]{
+  			display: none;
+  		}
+  		label{
+  			display: block;
+  			margin-bottom: .6rem;
+  			@include Bp(767){
+  				width: 150px;
+  				margin: 0 auto .6rem;
+  			}
+  		}
+  		label::before{
+  			@include checkbox01;
+  			margin-right: .5rem;
+  		}
+  		input[type="checkbox"]:checked + label::before{
+  			@include checkbox01checked(16px,$white);
+  			background: $purple;
+  		}
+  	}
+  }
+
+.result{
+	width: 100%;
+	padding: 1.5rem 0;
+	@include Bp(767){
+		padding: 1.5rem 2rem;
+	}
+	h2{
+		font-size: 24px;
+		margin-bottom: .5rem;
+		@include Bp(767){
+			display: none;
+		}
+	}
+	.num {
+		color: $purple;
+		font-weight: 700;
+	}
+}
+
+@include Bp(767){
+	.location{
+		text-align: center;
+	}
+	.time span{
+		display: inline-block;
+		width: 35px;
+	}
+}
+
+.prompt{
+	margin-bottom: 1.5rem;
+	@include Bp(767){
+		display: none;
+	}
+}
+.btn{
+	padding: .5rem 1rem;
+	font-style: italic;
+	border-radius: 50px;
+	border: 1px solid $purple;
+	color: $purple;
+	background:transparent;
+	cursor: pointer;
+	transition: all .3s;
+	outline: 0;
+	margin-right: .5rem;
+	&:hover{
+		background: $purple;
+		color: $white;
+	}
+	i{
+		margin-left: .5rem;
+	}
+}
+
+.details{
+	margin-bottom: 1.5rem;
+	display: flex;
+	transition: all .3s;
+	@include Bp(992){
+		flex-direction: column;
+	}
+	&:hover{
+		box-shadow: 0 0 5px $black-700;
+	}
+	.photo{
+		height: auto;
+		min-width: 220px; 
+		@include Bp(992){
+			height: 196px;
+		}
+	}
+	.photo1{
+		background: url(https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80) no-repeat center center;
+	}
+	.photo2{
+		background: url(https://images.unsplash.com/photo-1548678967-f1aec58f6fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1490&q=80) no-repeat center center;
+	}
+	.photo3{
+		background: url(https://images.unsplash.com/photo-1540202404-a2f29016b523?ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80) no-repeat center center;
+	}
+} 
+
+.description{
+	background: $white;
+	max-width: 560px;
+	padding: 1.5rem 1.25rem;
+	@include Bp(1024){
+		padding: .75rem;
+	}
+	h3{
+		line-height: 1.5;
+		font-size: 24px;
+		font-weight: 700;
+		color: $purple;
+		margin-bottom: 1rem;
+	}
+	p{
+		line-height: 1.5;
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		margin-bottom: 1.5rem;
+		@include Bp(1024){
+			-webkit-line-clamp: 3;
+		}
+	}
+}
+
+.label{
+	margin-bottom: 1rem;
+	.label-title{
+		font-weight: 700;
+	}
+	.label-condition{
+		color: $white;
+		font-style: italic;
+		background: $black-500;
+		padding: .2rem 1rem;
+		border-radius: 50px;
+		margin-left: 1rem;
+		@include Bp(320){
+			margin-left: 0;
+			padding: .2rem .7rem
+		}
+	}
+}
+
+.other{
+	.city{
+		margin-right: 1.25rem;
+	}
+	span{
+		color: $black-700;
+		@include Bp(1024){
+			display: block;
+			&.city{
+				margin-bottom: .5rem;
+			}
+		}
+		i{
+			margin-right: .5rem;
+			color: $black-900;
+		}
+	}
+}
+
+.pages{
+	display: flex;
+	justify-content: flex-end;
+	@include Bp(767){
+		justify-content: center;
+	}
+	a{
+		display: block;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		text-decoration: none;
+		color: $purple-light;
+		background: $white;
+		border: 1px solid $black-500;
+		transition: all .3s;
+		margin-left: -1px;
+		@include Bp(320){
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+		}
+		&:hover{
+			background: $black-100;
+		}
+		&:active,&.active{
+			background: $purple-light;
+			color: $white;
+			border: 1px solid $purple-light;
+		}
+	} 
+}
+

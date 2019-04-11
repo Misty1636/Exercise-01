@@ -1,0 +1,12 @@
+@mixin Bp($point){
+	@media (max-width: $point+px){
+		@content
+	}
+}
+
+@mixin Bp-between($point-min, $point-max){ 
+	@media screen and ( min-width: $point-min+px ) and ( max-width: $point-max+px ){ 
+	  @content 
+  } 
+}
+
