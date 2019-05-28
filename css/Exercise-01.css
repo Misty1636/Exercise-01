@@ -55,7 +55,7 @@ html {
   box-sizing: inherit; }
 
 body, html {
-  font-family: 'Roboto Regular'; }
+  font-family: sans-serif; }
 
 .wrap {
   max-width: 1200px;
@@ -76,7 +76,7 @@ body, html {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between; } }
-  @media (max-width: 992px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     .header {
       display: block;
       padding: 0; } }
@@ -86,7 +86,7 @@ body, html {
   @media (max-width: 992px) {
     .logo {
       margin-right: 0; } }
-  @media (max-width: 992px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     .logo {
       padding: 1.25rem 0;
       text-align: center; } }
@@ -104,7 +104,7 @@ body, html {
   @media (max-width: 767px) {
     .serach-content {
       background: #F2F2F2; } }
-  @media (max-width: 767px) and (max-width: 414px) {
+  @media (max-width: 414px) {
     .serach-content {
       padding-left: 2rem;
       padding-right: 2rem; } }
@@ -122,7 +122,7 @@ body, html {
     .search {
       border-color: #000000;
       width: 350px; } }
-  @media (max-width: 767px) and (max-width: 414px) {
+  @media (max-width: 414px) {
     .search {
       width: 100%; } }
   .search .icon {
@@ -160,7 +160,7 @@ body, html {
   @media (max-width: 767px) {
     .content {
       padding: 0 3.5rem; } }
-  @media (max-width: 767px) and (max-width: 576px) {
+  @media (max-width: 576px) {
     .content {
       padding: 0; } }
   .content .box {
@@ -180,7 +180,7 @@ body, html {
     .condition {
       margin: 0 auto;
       width: 450px; } }
-  @media (max-width: 767px) and (max-width: 576px) {
+  @media (max-width: 576px) {
     .condition {
       width: 100%; } }
   .condition h3 {
@@ -309,11 +309,20 @@ body, html {
       .details .photo {
         height: 196px; } }
   .details .photo1 {
-    background: url(https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80) no-repeat center center; }
+    background-image: url("https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
   .details .photo2 {
-    background: url(https://images.unsplash.com/photo-1548678967-f1aec58f6fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1490&q=80) no-repeat center center; }
+    background-image: url("https://images.unsplash.com/photo-1548678967-f1aec58f6fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1490&q=80");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
   .details .photo3 {
-    background: url(https://images.unsplash.com/photo-1540202404-a2f29016b523?ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80) no-repeat center center; }
+    background-image: url("https://images.unsplash.com/photo-1540202404-a2f29016b523?ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
 
 .description {
   background: #FFFFFF;
@@ -330,13 +339,13 @@ body, html {
     margin-bottom: 1rem; }
   .description p {
     line-height: 1.5;
+    margin-bottom: 1.5rem;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
-    overflow: hidden;
-    margin-bottom: 1.5rem; }
+    overflow: hidden; }
     @media (max-width: 1024px) {
       .description p {
         -webkit-line-clamp: 3; } }
